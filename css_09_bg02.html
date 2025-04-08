@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+        body {
+            /* background-image: url('./images/bg01.jpg'); */
+            /* 기본적으로 타일 형식 */
+            /* background-repeat: no-repeat; */
+            background-size: contain; /*가로 세로 사이즈 중 큰 사이즈에 맞추어서 사이즈 조절*/
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            /* 정적사이트=순차적용 특징 */
+            /* background-position: top; */
+            /*가로(수평) top 세로(수직) center*/
+        }
+
+        /* body에 바로 넣으면 인식불가 */
+
+        .box{
+        width: 200px; height: 200px;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 200px;
+        }
+
+        .box01{
+            background-image: url(./images/bg02.jpg);
+        }
+
+        .box02{
+            background-image: url(./images/bg02.jpg);
+            background-size: cover;
+            /* 긴 길이에 맞춤 */
+        }
+
+        .box03{
+            background-image: url(./images/bg02.jpg);
+            background-size: contain;
+            /* 짧은 길이에 맞춤 */
+        }
+        
+        .box04{
+            background-image: url(./images/bg02.jpg);
+            background-size: 100% 100%;
+        }
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    <div class="box box01">box01</div>
+    <div class="box box02">box02</div>
+    <div class="box box03">box03</div>
+    <div class="box box04">box04</div>
+</body>
+</html>

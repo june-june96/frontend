@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: 0;}
+        a {text-decoration: none; color: black;}
+
+        span, div{
+            background-color: #ccc;
+            width: 200px; height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid black;
+            /* padding: 5px;  */
+            /*인라인태그는 패딩으로 사이즈 잡기*/
+        }
+        /*인라인태그는 옆으로 오고 글자취급
+          인라인태그는 width,height 값 안먹음
+          인라인태그로 레이아웃 잡지않기*/
+
+          div {
+            /* float: left; */
+            display: inline-block;
+          }
+
+          span{
+            display: block;
+          }
+
+          .gnb{
+            margin: 50px auto;
+            width: 1000px;
+            margin: 50px auto;
+          }
+          .gnb li{
+            width: 200px; height: 50px;
+            background-color: aliceblue;
+            color: aqua;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+          }
+
+          .gnb li ul li{
+            display: none;
+          }
+     
+          .gnb li:hover ul li{
+            display: block;
+            /* display = 보인다/안보인다(보일 때) 속성 
+               block : block속성으로 만듬 / 대신 여백이생김
+               inline: inline 속성으로 바뀜 / 대신 옆으로 붙음
+               inline-block : */
+          }
+
+    </style>
+</head>
+
+
+<body>
+    <section>
+        <span>inline_tag01</span>
+        <span>inline_tag02</span>
+        <span>inline_tag03</span>
+    </section>
+
+    <section>
+        <div>block_tag_01</div>
+        <div>block_tag_02</div>
+        <div>block_tag_03</div>
+    </section>
+
+    <ul class="gnb">
+        <li>menu 01
+            <ul>
+                <li>menu01-1</li>
+                <li>menu01-2</li>
+                <li>menu01-3</li>
+                <li>menu01-4</li>
+            </ul>
+        </li><!--menu01-->
+        <li>menu 02</li>
+        <li>menu 03</li>
+        <li>menu 04</li>
+        <li>menu 05</li>
+    </ul>
+</body>
+</html>

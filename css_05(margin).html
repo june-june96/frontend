@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        *{margin: 0; padding: 0;}
+
+     .test{
+        background-color: #ccc;
+        width: 300px; height: 300px;
+        /* 인라인태그는 박스를 줄 수 없다 */
+     }
+
+     section{
+        overflow: hidden;
+     }
+
+     div{
+        width: 200px; height: 200px;
+        text-align: center;
+        line-height: 200px;
+        background-color: #ccc;
+        float: left;
+     }
+
+     .box02 {
+        margin: 10px;
+     }
+
+     .box03 {
+        margin-top: 10px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+     }
+
+     .box04{
+        margin: 20px 40px
+        /* 위아래/왼쪽 오른쪽 */
+     }
+
+     .box05{
+        margin: 10px 20px 30px;
+        /* 위/좌우/아래 */
+     }
+
+     .box06{
+        margin: 10px 20px 30px 40px;
+        /* 상/우/좌/하 */
+     }
+
+     .box{
+        width: 1070px; height: 200px;
+        background-color: yellow;
+        text-align: center;
+        margin: 0 auto; /*박스 가운데 정렬*/
+     }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- <span class="test">인라인태그</span>
+    <div class="test">블럭태그</div> -->
+
+    <section>
+        <div class="box01">box01</div>
+        <div class="box02">box02</div>
+        <div class="box03">box03</div>
+        <div class="box04">box04</div>
+        <div class="box05">box05</div>
+        <div class="box06">box06</div>
+    </section>
+
+    <section class="box">section_box</section>
+
+</body>
+</html>

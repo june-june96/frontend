@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: 0;}
+        a {text-decoration: none; color: black;}
+
+        .boxA{
+            width: 1260px;
+            background-color: #ccc;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .boxA .box{
+            width: 300px; height: 300px;
+            border: 1px solid black; box-sizing: border-box;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .boxA .box04{margin-right: 0;}
+
+        .boxB{
+            width: 1260px; height: 200px;
+            background-color: #ccc;
+            margin: 50px auto;
+        }
+
+        .boxB div{
+            width: 620px; height: 200px;
+            border: 1px solid black; box-sizing: border-box;
+            float: left;
+        }
+
+        .boxB .box05{margin-right: 20px;}
+
+        .boxC{
+            width: 1260px; height: 300px;
+            background-color: #ccc;
+            margin: 0  auto;
+        }
+
+        .boxC .box{
+            width: 300px; height: 300px;
+            border: 1px solid black; box-sizing: border-box;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .boxC .box10{margin: 0;}
+
+        /* 부모가 높이랑 너비가 정확하게 제시되어있다면 
+        float가 있더라도 자기 자리에 들어온다 */
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+     <section class="boxA">
+        <div class="box box01">box01</div>
+        <div class="box box02">box02</div>
+        <div class="box box03">box03</div>
+        <div class="box box04">box04</div>
+     </section>
+
+     <section class="boxB">
+        <div class="box05">box05</div>
+        <div class="box06">box06</div>
+     </section>
+
+     <section class="boxC">
+        <div class="box box07">box07</div>
+        <div class="box box08">box08</div>
+        <div class="box box09">box09</div>
+        <div class="box box10">box10</div>
+     </section>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 태그</title>
+</head>
+<body>
+
+    <table border="1" cellspacing="0" cellpadding="20px" width="800px" height="300px" align="center" bgcolor="yellow" bordercolor="red">
+        <caption>학생 인적 사항</caption>
+        <tr height="150px" bgcolor="orange">
+            <th width="100px">번호</th>
+            <th width="200px">이름</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td align="center" bgcolor="red">홍길동</td>
+            <td>010-1234-5681</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>박광배</td>
+            <td align="right">011-9633-8522</td>
+        </tr>
+    </table>
+
+    <table border="1" cellspacing="0" width="200px" height="200px">
+        <tr>
+            <td>1</td>
+            <td colspan="3">2</td>
+            <!-- <td>3</td> -->
+            <!-- <td>4</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">5</td>
+            <!-- <td>6</td> -->
+            <td>7</td>
+            <td rowspan="3">8</td>
+        </tr>        <tr>
+            <td rowspan="2">9</td>
+            <td>10</td>
+            <td>11</td>
+            <!-- <td>12</td> -->
+        </tr>        <tr>
+            <!-- <td>13</td> -->
+            <td>14</td>
+            <td>15</td>
+            <!-- <td>16</td> -->
+        </tr>
+    </table>
+    
+</body>
+</html>

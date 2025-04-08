@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Single+Day&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet"> -->
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- user_css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+        /* 먼저 브라우저로 가져와야 적용
+           하단에 기입 시 위에 있는 폰트 순차대로 처리되기 때문에 적용 불가
+           순차처리 - 로딩되지 않은 소스는 처리할 수 없음 / 위에서부터 처리 및 시행하는 방식 */
+        @font-face{
+            font-family: 'East Sea Dokdo';
+            /* 이 폰트를 사용하겠다 */
+            src: url(./font/EastSeaDokdo-Regular.ttf);
+            /* 다운로드 폰트를 사용하겠다는 정의 */
+        }
+      
+        /* default setting/ reset 
+        기본적인 값 해제*/
+        *{margin: 0; padding: 0;}
+        /* '*' = 모든 태그 */
+        a{color: black; text-decoration: none;}
+        li{list-style: none;}
+
+        div{
+            font-size: 32px;
+            /* margin: 20px; */
+            /* margin - 바깥쪽 여백 */
+        }
+    
+         .font01{
+            font-family: 바탕, 궁서, 'Times New Roman', serif;
+            /* 비슷한 폰트끼리 묶어놔야 함 */
+            /* 폰트 패밀리 : 비슷한 글꼴끼리 묶어서 없으면 그 뒤에 있는 글꼴로 대체 */
+            /* 꺾여져있는 글꼴 : sans-serif */
+            /* serif는 무조건 기입 */
+            /* 띄어쓰기가 있는 글씨체는 작은 따옴표로 묶기 */
+            /* 가시성-sans-serif,가독성-serif */
+            /* 한글 글씨체, 영어글씨체, serif 방식으로 적용시키기 */
+            /* ttf, wof 적용시키기 */
+            text-indent: 16px;
+            /* 문단에 한 글자는 띄워 쓴다 (들여쓰기) 
+               글자 한 글자는 16px
+               내어쓰기는 -값으로 적용 (-16px)*/
+         }
+    
+         .font02 {
+            font-family: "Single Day", cursive;
+            /* font-weight: 400; */
+            /* 기본값이 normal(400) */
+         }
+
+         .font03 {
+            font-family: "Gamja Flower", sans-serif;
+         }
+
+         .font04{
+            font-family: "East Sea Dokdo", sans-serif;;
+         }
+
+         
+         /*★★★★★*/.icon{
+            font-size: 24px;
+            color: blue;
+         }
+
+         .box{
+            width: 300px; height: 300px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 300px;
+            /* line-height를 box 높이와 일치시키기 */
+            /* 내 자신이 스스로 위치를 변경하는 태그는 없음 */
+         }
+    
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="font01">글꼴 테스트01, font test</div>
+    <div class="font02">글꼴 테스트02, font test</div>
+    <div class="font03">글꼴 테스트03, font test</div>
+    <div class="font04">글꼴 테스트04, font test</div>
+
+    <p class="home icon"><i class="fa-solid fa-house"></i></p>
+    <p class="email icon"><i class="fa-solid fa-envelope"></i></p>
+
+    <div class="box">box_test</div>
+
+</body>
+</html>

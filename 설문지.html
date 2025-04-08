@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문지</title>
+</head>
+
+<body>
+<form name="frm" action="ex.asp" method="post">
+    
+<h2>설문지</h2>
+<hr color="black">
+이름 : <input type="name" size="21">
+
+성 별 : <input type="radio" name="gender"> 남
+       <input type="radio" name="gender"> 여<br>
+
+생년 월윌 : <input type="text" placeholder="연도-월-일" size="16">
+
+주소 : <input type="text" size="30">
+
+
+<ol>
+    <li>당신의 취미는?<br>
+        <input type="checkbox" name="hobby" value="h1">등산<br>
+        <input type="checkbox" name="hobby" value="h2">여행<br>
+        <input type="checkbox" name="hobby" value="h3">낚시<br>
+    </li><br>
+
+    <li>당신의 주량은?<br>
+        <input type="radio" name="alchol" value="non-alchol"> 근처도 못간다<br>
+        <input type="radio" name="alchol" value="one-bottle"> 한 병<br>
+        <input type="radio" name="alchol" value="two-bottles"> 두 병
+    </li><br>
+
+    <li>당신이 좋아하는 과일은?
+    <select>
+        <option>바나나</option>
+        <option>사과</option>
+        <option>샤인머스캣</option>
+        <option>망고</option>
+        <option>딸기</option>
+    </select>
+    </li><br>
+
+    <li>당신이 관심있는 언어는?(다중선택가능)<br>
+    <select multiple>
+        <option>HTML5</option>
+        <option>CSS3</option>
+        <option>JavaScript</option>
+        <option>jQuery</option>
+        <option>jQuery Mobile</option>
+    </select>
+    </li><br>
+
+    <li>자기소개<br>
+        <textarea rows="10" cols="88">
+        </textarea>
+    </li><br><br><br>
+
+    <input type="submit" value="완료">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="reset" value="다시">
+</ol>
+</form>
+</body>
+
+</html>

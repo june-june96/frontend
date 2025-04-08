@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+</head>
+
+<style>
+
+    .bgcolor{
+        background-color: #ccc;
+    }
+
+     .title{
+        font-size: 20px;
+        color: blue;
+     }
+
+     .product img {
+        width: 300px; height: 300px;
+     }
+
+     h2, 
+     .product p
+     .event p,
+     .review p
+     {
+        text-decoration: underline;
+     }
+
+     /* input[type=text]{
+        background-color: yellow;
+        width: 500px;height: 150px;
+        input 태그에만 해당
+     } */
+
+     .input {
+        background-color: yellow;
+        width: 500px;height: 150px;
+     }
+
+     input:focus {
+        background-color: #ccc;
+     }
+
+     a:link{
+        text-decoration: none;
+        color: black;
+     }
+
+     a:visited {
+        color: black;
+     }
+     /* 한번 들어갔다 나온 건 파란색으로 안바뀌겠다 */
+
+     a:hover{
+        color: red;
+        font-weight: bold;
+     }
+     /* 반응 이벤트 선택자 */
+
+     a:active{
+        color: blue;
+     }
+     /* 클릭하는 순간 이벤트 발생 */
+
+</style>
+<body>
+    
+     <!-- <h2 class="title bgcolor">인기상품</h2>
+     <div class="product"> -->
+        <!-- 태그명.클래스
+        해더#해더 = 자동입력  -->
+        <!-- class는 누구나 알아 볼 수 있도록 만들기 -->
+         <!-- <img src="./images/img02.jpg" alt="인기상품 이미지">
+         <p class="bgcolor">상품명</p>
+     </div>
+     <br><br> -->
+
+     <!-- <h2 class="title">신상품</h2>
+     <div class="product"> -->
+        <!-- 태그명.클래스
+        해더#해더 = 자동입력  -->
+        <!-- class는 누구나 알아 볼 수 있도록 만들기 -->
+         <!-- <img src="./images/img03.jpg" alt="신상품 이미지">
+         <p>상품명</p>
+     </div> -->
+
+     <!-- div는 디자인, id는 기능 설계 -->
+
+     ID : <input type="text" class="input"><br>
+     PW : <input type="password"><br>
+
+     <a href="http://www.naver.com">naver</a><br>
+     <a href="http:/www.daum.com">daum</a><br>
+
+</body>
+</html>

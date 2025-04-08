@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: 0;}
+        a {text-decoration: none; color: black;}
+
+        .gnb{
+            width: 1000px; 
+            /* height: 50px; */
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+
+        /* 가상요소 - html body태그에서 실제로 존재하지않지만 스타일 기능만 구현 */
+        /*★*/.gnb::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .gnb li{
+            width: 200px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .gnb li ul li{
+            display: none;
+        }
+
+        .gnb:hover li ul li{
+            display: block;
+        }
+
+        .visual_banner{
+            width: 1000px; height: 300px;
+            background-color: yellow;
+            margin: 20px auto;
+        }
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <ul class="gnb">
+        <li>menu01
+            <ul>
+                <li>menu01-1</li>
+                <li>menu01-2</li>
+                <li>menu01-3</li>
+                <li>menu01-4</li>
+            </ul>
+        </li><!--menu01-->
+
+        <li>menu02
+            <ul>
+                <li>menu02-1</li>
+                <li>menu02-2</li>
+                <li>menu02-3</li>
+                <li>menu02-4</li>
+            </ul>
+        </li><!--menu02-->
+
+        <li>menu03
+            <ul>
+                <li>menu03-1</li>
+                <li>menu03-2</li>
+                <li>menu03-3</li>
+                <li>menu03-4</li>
+            </ul>
+        </li><!--menu03-->
+
+        <li>menu04
+            <ul>
+                <li>menu04-1</li>
+                <li>menu04-2</li>
+                <li>menu04-3</li>
+                <li>menu04-4</li>
+            </ul>
+        </li><!--menu04-->
+
+        <li>menu05
+            <ul>
+                <li>menu05-1</li>
+                <li>menu05-2</li>
+                <li>menu05-3</li>
+                <li>menu05-4</li>
+            </ul>
+        </li><!--menu05-->
+    </ul><!--gnb-->
+
+    <div class="visual_banner">
+        <h1>visual_main</h1>
+    </div>
+</body>
+</html>
