@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        /* menu btn (open/close) */
+        /* '~'는 동생 컨텐츠를 의미함 */
+
+        #menubtn{display: none;}
+        /* 처음 사이트를 열었을 때 메뉴가 안 보이게 해라 */
+
+        #menu_btn:checked ~ .gnb .menu_list li ul li{
+            display: block;
+        }
+        /* 메뉴가 체크표시가 되면 block처리 해서 열어라 */
+        #menu_btn ~ .gnb .menu_list li ul li{display: none;}
+        /* 메뉴가 체크표시가 없다면 안 보이게 해라 */
+
+        #menu_btn:checked ~ .gnb .open_btn{display: none;}
+        /* 메뉴버튼이 체크되어 있으면 오픈버튼을 숨겨라 */
+        #menu_btn:checked ~ .gnb .close_btn{display: block;}
+        /* 메뉴버튼이 체크되어 있으면 닫기버튼을 보여라 */
+
+        #menu_btn ~ .gnb .open_btn{display: block;}
+        /* 메뉴버튼이 체크되어 있지 않으면 오픈버튼을 보여라 */
+        #menu_btn ~ .gnb .close_btn{display: none;}
+        /* 메뉴버튼이 체크되어 있지 않으면 닫기버튼은 숨겨라 */
+        
+        .gnb{
+            width: 1030px; height: 30px;
+            margin: 0 auto;
+        }
+
+        .gnb label{
+            display: block;
+            width: 30px; height: 30px;
+            float: left;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .gnb .menu_list{
+            width: 1000px; height: 30px;
+            float: left;
+        }
+
+        .gnb .menu_list li{
+            width: 200px; height: 30px;
+            float: left;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        /* .gnb li ul li{
+            display: none;
+        } */
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    <input type="checkbox" id="menu_btn">
+    <nav class="gnb">
+        <label for="menu_btn" class="open_btn">열기</label>
+        <label for="menu_btn" class="close_btn">닫기</label>
+        <ul class="menu_list">
+            <li>menu01
+                <ul>
+                    <li>menu01-1</li>
+                    <li>menu01-2</li>
+                    <li>menu01-3</li>
+                    <li>menu01-4</li>
+                </ul>
+            </li>
+
+            <li>menu02
+                <ul>
+                    <li>menu02-1</li>
+                    <li>menu02-2</li>
+                    <li>menu02-3</li>
+                    <li>menu02-4</li>
+                </ul>
+            </li>
+
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+    </nav>
+    
+
+</body>
+</html>
