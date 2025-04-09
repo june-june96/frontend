@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        body{height: 3000px;}
+        
+        .header{
+            width: 100%; height: 200px;
+            background-color: #ccc;
+
+        }
+
+        .gnb{
+            width: 100%; height: 30px;
+            background-color: black;
+            color: white;
+            position: sticky;
+            /* 스크롤 되었을 때 자기 위치 고정 
+            (스크롤 이벤트, 지정 좌표 필수)
+            스크롤 이벤트가 일어났을 때 지정 좌표에 픽스
+            header안에 nav는 적용 불가 */
+            top: 0; left: 0;
+            z-index: 3;
+        }
+
+        .wrap{
+            width: 800px; height: 800px;
+            border: 1px solid black;
+            margin: 0 auto;
+            position: relative;
+            /* box02의 부모로 설정 */
+        }
+
+        /* position : relative, absolute, fixed, sticky, static(= normal 속성해제) */
+
+        .box{
+            width: 100px; height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .box01{
+            background-color: yellow;
+            position: relative;
+            /* relative = 상대좌표 (누군가에 따라 자신의 위치에서 이동가능)
+               자신의 자리를 비워야하기 때문에 잘 쓰지 않는다.
+               absolute의 부모를 알려줄 때, z-index 사용시만 거의 사용 */
+            top: 50px; left: 50px;
+             /*position은 위치를 바꾸는것이라 위치값은 필수
+               top left값 적용가능 */
+               z-index: 1;
+        }
+
+        .box02{background-color: green;
+               position: absolute;
+               /* absoulte = 절대좌표 (누군가와 상관없이
+               본인 부모(브라우저 창이 기본 부모) 기준으로 좌표따라 이동가능) 
+                float와 같이 자신을 띄워버림
+                부모를 지정할 수 있음(부모가 있을 때만 넣는다)*/
+               top: 250px; left: 250px;
+               z-index: 1;
+        }
+
+        .box03{background-color: red;
+               position: fixed;
+               top: 200px; right: 0;
+               /* 브라우저 화면상에서 고정 
+                  처음부터 그 자리 고정*/
+                  z-index: 1;
+        }
+        .box04{background-color: blue;
+               position: relative;
+               z-index: 2;}
+               /* z-index는 position속성을 가진 콘텐츠끼리 순서 정렬 */
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <h1>header</h1>
+    </header>
+
+    <nav class="gnb">
+        <h1>gnb</h1>
+    </nav>
+
+    <div class="wrap">
+        <div class="box box01">box01</div>
+        <div class="box box02">box02</div>
+        <div class="box box03">box03</div>
+        <div class="box box04">box04</div>
+    </div>
+
+</body>
+</html>
