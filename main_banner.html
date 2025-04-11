@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        #vb_rad01, #vb_rad02, #vb_rad03, #vb_rad04 {display: none;} 
+        #vb_rad01:checked ~ .visual_box .visual_main li:nth-child(1) {display: block;}
+        #vb_rad02:checked ~ .visual_box .visual_main li:nth-child(2) {display: block;}
+        #vb_rad03:checked ~ .visual_box .visual_main li:nth-child(3) {display: block;}
+        #vb_rad04:checked ~ .visual_box .visual_main li:nth-child(4) {display: block;}
+
+        #vb_rad01:checked ~ .visual_box .visual_label label:nth-child(1){background-color: red;}
+        #vb_rad02:checked ~ .visual_box .visual_label label:nth-child(2){background-color: red;}
+        #vb_rad03:checked ~ .visual_box .visual_label label:nth-child(3){background-color: red;}
+        #vb_rad04:checked ~ .visual_box .visual_label label:nth-child(4){background-color: red;}
+        /* -------------------------------------------------------------------------------------- */
+        .visual_box{
+            width: 784px; height: 537px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .visual_box .visual_main{}
+        .visual_box .visual_label{
+            width: 120px; height: 20px;
+            position: absolute;
+            bottom: 20px; 
+            /* left: 322px; */
+            /*★*/left: 50%; margin-left: -60px;
+            /* 중앙으로 당겨놓고 indicator값만큼 다시 당기기 */
+        }
+
+        .visual_box .visual_main li{
+            display: none;
+        }
+
+        .visual_box .visual_label label{
+          display: block;
+          width: 20px; height: 20px;
+          background-color: #ccc;
+          border-radius: 50%;
+          float: left;
+          margin: 5px;
+        }
+
+        /*-------------wing_banner-------------*/
+        /* #wing_btn{display: none;} */
+
+        /* #wing_btn:checked ~ .wing_box .wing_banner {display: block;}
+        #wing_btn ~ .wing_box .wing_banner {display: none;} */
+
+        #wing_btn:checked ~ .wing_box .open_btn {display: none;}
+        #wing_btn:checked ~ .wing_box .close_btn {display: block;}
+        #wing_btn ~ .wing_box .open_btn{display: block;}
+        #wing_btn ~ .wing_box .close_btn{display: none;}
+
+        #wing_btn:checked ~ .wing_box02 .open_btn01 {display: none;}
+        #wing_btn:checked ~ .wing_box02 .close_btn01 {display: block;}
+        #wing_btn ~ .wing_box02 .open_btn01{display: block;}
+        #wing_btn ~ .wing_box02 .close_btn01{display: none;}
+
+        
+        .wing_box label{
+            display: block;
+            width: 50px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: right;
+        }
+
+        .wing_box02 label{
+            display: block;
+            width: 50px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+        
+        #wing_btn:checked ~ .visual_box .visual_main li:nth-child(3) {display: block;}
+        
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+<input type="radio" name="vb" id="vb_rad01" checked>
+<input type="radio" name="vb" id="vb_rad02">
+<input type="radio" name="vb" id="vb_rad03">
+<input type="radio" name="vb" id="vb_rad04">
+
+
+<section class="visual_box">
+    <ul class="visual_main">
+        <li><img src="./images/125main1.jpg" alt="메인 비주얼 이미지1"></li>
+        <li><img src="./images/125main2.jpg" alt="메인 비주얼 이미지2"></li>
+        <li><img src="./images/125main3.jpg" alt="메인 비주얼 이미지3"></li>
+        <li><img src="./images/125main4.jpg" alt="메인 비주얼 이미지4"></li>
+    </ul>
+    <!-- visual_main_img -->
+     <div class="visual_label">
+        <label for="vb_rad01"></label>
+        <label for="vb_rad02"></label>
+        <label for="vb_rad03"></label>
+        <label for="vb_rad04"></label>
+     </div>
+
+     
+</section>
+
+<!-- <input type="checkbox" id="wing_btn">
+<div class="wing_box">
+    <label for="wing_btn" class="open_btn">→</label>
+    <label for="wing_btn" class="close_btn">←</label>
+  </div> -->
+
+  <input type="radio" id="wing_btn">
+<div class="wing_box">
+    <label for="wing_btn" class="open_btn">→</label>
+    <label for="wing_btn" class="close_btn">←</label>
+  </div>
+
+  <input type="radio" id="wing_btn">
+  <div class="wing_box02">
+      <label for="wing_btn" class="open_btn01">→</label>
+      <label for="wing_btn" class="close_btn01">←</label>
+    </div>
+</body>
+</html>
