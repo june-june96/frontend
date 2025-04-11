@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+       #tab_rad01, #tab_rad02, #tab_rad03, #tab_rad04, #tab_rad05 {display: none;}
+        /* #tab_rad01:checked ~ .notice_box .sheet div:nth-child(1) {display: block;}
+        #tab_rad01:checked ~ .notice_box .sheet div:nth-child(2) {display: none;}
+        #tab_rad01:checked ~ .notice_box .sheet div:nth-child(3) {display: none;}
+
+        #tab_rad02:checked ~ .notice_box .sheet div:nth-child(1) {display: none;}
+        #tab_rad02:checked ~ .notice_box .sheet div:nth-child(2) {display: block;}
+        #tab_rad02:checked ~ .notice_box .sheet div:nth-child(3) {display: none;}
+
+        #tab_rad03:checked ~ .notice_box .sheet div:nth-child(1) {display: none;}
+        #tab_rad03:checked ~ .notice_box .sheet div:nth-child(2) {display: none;}
+        #tab_rad03:checked ~ .notice_box .sheet div:nth-child(3) {display: block;} */
+
+        #tab_rad01:checked ~ .notice_box .sheet div:nth-child(1) {display: block;}
+        #tab_rad02:checked ~ .notice_box .sheet div:nth-child(2) {display: block;}
+        #tab_rad03:checked ~ .notice_box .sheet div:nth-child(3) {display: block;}
+        #tab_rad04:checked ~ .notice_box .sheet div:nth-child(4) {display: block;}
+        #tab_rad05:checked ~ .notice_box .sheet div:nth-child(5) {display: block;}
+
+
+
+
+        /* #tab_rad01:checked ~ .notice_box .tab_list label:nth-child(1) {background-color: yellow;}
+        #tab_rad02:checked ~ .notice_box .tab_list label:nth-child(2) {background-color: yellow;}
+        #tab_rad03:checked ~ .notice_box .tab_list label:nth-child(3) {background-color: yellow;} */
+
+        .notice_box .tab_list{
+            overflow: hidden;
+        }
+
+        .notice_box .tab_list label{
+            display: block;
+            width: 150px; height: 50px;
+            background-color: #ccc;
+            /* border-radius: 15px 15px 0 0; */
+            text-align: center;
+            line-height: 50px;
+            /* float: left; */
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+
+        .notice_box .sheet div{
+            display: none;
+            width: 500px; height: 500px;
+            box-sizing: border-box;
+            /* background-color: yellow; */
+            float: right;
+        }
+
+     
+
+    </style>
+</head>
+
+
+<body>
+
+<input type="radio" name="tab_rad" id="tab_rad01" checked>
+<input type="radio" name="tab_rad" id="tab_rad02">
+<input type="radio" name="tab_rad" id="tab_rad03">
+<input type="radio" name="tab_rad" id="tab_rad04">
+<input type="radio" name="tab_rad" id="tab_rad05">
+
+<section class="notice_box">
+    <div class="tab_list">
+        <label for="tab_rad01">제주</label>
+        <label for="tab_rad02">도쿄</label>
+        <label for="tab_rad03">상하이</label>
+        <label for="tab_rad04">뉴욕</label>
+        <label for="tab_rad05">런던</label>
+        </div>
+
+        <div class="sheet">
+        <div><img src="./images/bananas-698608_1280.jpg" alt=""></div>
+        <div><img src="./images/camera.jpg" alt=""></div>
+        <div><img src="./images/nature_640.jpg.jpg" alt=""></div>
+        <div><img src="./images/bg01.jpg" alt=""></div>
+        <div><img src="./images/img05.jpg" alt=""></div>
+        </div>
+</section>
+
+</body>
+</html>

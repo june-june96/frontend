@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        .title{
+            width: 1070px;
+            font-size: 24px;
+            margin: 0 auto;
+        }
+
+        /* --------best box------------ */
+        #best_chk{display: none;}
+        #best_chk:checked ~ .best_box .best_after {display: block;}
+        #best_chk  ~ .best_box .best_after {display: none;}
+
+        #best_chk:checked ~ .best_box .open_best_btn{display: none;}
+        #best_chk ~ .best_box .open_best_btn{display: block;}
+
+        #best_chk:checked ~ .best_box .close_best_btn{display: block;}
+        #best_chk ~ .best_box .close_best_btn{display: none;}
+
+
+        /* .best_box .best_after{
+            display: none;
+        } */
+
+
+        /* --------best box------------ */
+
+        .best_box{
+            width: 1070px;
+            margin: 0 auto;
+        }
+
+        .best_box .best{
+            /* width: 100%; */
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .best_box .best div{
+            width: 260px; height: 260px;
+            border: 1px solid black; box-sizing: border-box;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .best_box .best div:nth-child(4) {margin: 0;}
+        /* div: nth-child(n) : div의 자식들 중 n번째 자식을 칭함 */
+
+        .best_box .best_before{}
+        .best_box label{
+            display: block;
+            width: 260px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 auto;
+        }
+
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <input type="checkbox" id="best_chk">
+    <!-- input은 부모 박스 위에 올리기 -->
+    <p class="title">베스트 상품</p>
+    <section class="best_box">
+        <div class="best best_before">
+            <div>best01</div>
+            <div>best02</div>
+            <div>best03</div>
+            <div>best04</div>
+        </div>
+        <!-- best before -->
+
+        <div class="best best_after">
+            <div>best05</div>
+            <div>best06</div>
+            <div>best07</div>
+            <div>best08</div>
+        </div>
+        <!-- best after -->
+
+        <label for="best_chk" class="open_best_btn">더보기</label>
+        <label for="best_chk" class="close_best_btn">닫기</label>
+    </section>
+    <!-- best box -->
+
+</body>
+</html>

@@ -11,40 +11,26 @@
         ol, ul, li{list-style: none;}
         a {text-decoration: none; color: black;}
 
+        body{height: 3000px;}
+
         /* menu btn (open/close) */
         /* '~'는 동생 컨텐츠를 의미함 */
 
-        body {height: 3000px;}
+        /* menu_button */
+        #menubtn{display: none;}
 
-        /* --------popup------------ */
-        #chk_btn{display: none;}
-        #chk_btn:checked ~ .popup_box {display: block;}
-        #chk_btn ~ .popup_box{display: none;}
-
-        input[type='checkbox'] {display: none;}
-        input[type='checkbox']:checked ~ .popup_box {display: block;}
-        input[type='checkbox']  {display: none;}
-
-        /* --------menu------------ */
-
-        #menu_btn{display: none;}
-        /* 처음 사이트를 열었을 때 메뉴가 안 보이게 해라 */
 
         #menu_btn:checked ~ .gnb .menu_list li ul li{display: block;}
-        /* 메뉴가 체크표시가 되면 block처리 해서 열어라 */
         #menu_btn ~ .gnb .menu_list li ul li{display: none;}
-        /* 메뉴가 체크표시가 없다면 안 보이게 해라 */
+
 
         #menu_btn:checked ~ .gnb .open_btn{display: none;}
-        /* 메뉴버튼이 체크되어 있으면 오픈버튼을 숨겨라 */
         #menu_btn:checked ~ .gnb .close_btn{display: block;}
-        /* 메뉴버튼이 체크되어 있으면 닫기버튼을 보여라 */
+
 
         #menu_btn ~ .gnb .open_btn{display: block;}
-        /* 메뉴버튼이 체크되어 있지 않으면 오픈버튼을 보여라 */
         #menu_btn ~ .gnb .close_btn{display: none;}
-        /* 메뉴버튼이 체크되어 있지 않으면 닫기버튼은 숨겨라 */
-        
+
         .gnb{
             width: 1030px; height: 30px;
             margin: 0 auto;
@@ -79,7 +65,27 @@
             display: none;
         } */
 
-     
+        /* wing_banner */
+        .wing_banner{
+            display: block;
+            width: 100px; height: 300px;
+            float: right;
+            background-color: #ccc;
+            color: black;
+            font-size: 14px;
+            text-align: center;
+            position: sticky;
+            top: 350px; left: 0;
+            z-index: 3;
+        }
+        
+        .box{
+            width: 100px; height: 100px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
 
     </style>
 </head>
@@ -114,6 +120,13 @@
             <li>menu05</li>
         </ul>
     </nav>
+
+    <div class="wing_banner">
+        <div class="box box01">찜한 목록</div>
+        <div class="box box02">최근 본 상품</div>
+        <div class="box box03">장바구니</div>
+    </div>
+
     
 
 </body>
