@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        .title{
+            width: 1070px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        /*-------------wing_banner-------------*/
+        #wing_btn{display: none;}
+        #wing_btn:checked ~ .wing_box .wing_banner {display: block;}
+        #wing_btn ~ .wing_box .wing_banner {display: none;}
+
+        #wing_btn:checked ~ .wing_box .open_btn {display: none;}
+        #wing_btn:checked ~ .wing_box .close_btn {display: block;}
+        #wing_btn ~ .wing_box .open_btn{display: block;}
+        #wing_btn ~ .wing_box .close_btn{display: none;}
+        
+        .wing_box{
+            position: fixed;
+            top: 0; right: 0;
+        }
+
+        .wing_box label{
+            display: block;
+            width: 50px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .wing_box .wing_banner{
+            width: 300px; height: 100vh;
+            /* 100vh : 세로 100% */
+            border: 1px solid black;
+            float: left;
+        }
+        /* float은 1차원적으로 들어간다.(ㅇ  000000 -> 불가) (ㅇ ㅇ -> 가능) */
+
+        /* -----추천상품------ */
+        #pro_rad01, #pro_rad02, #pro_rad03, #pro_rad04, #pro_rad05, #pro_rad06 {display: none;}
+
+        #pro_rad01:checked ~ .product .pro_left .sheet01 {display: block;}
+        #pro_rad02:checked ~ .product .pro_left .sheet02 {display: block;}
+        #pro_rad03:checked ~ .product .pro_left .sheet03 {display: block;}
+        #pro_rad04:checked ~ .product .pro_left .sheet04 {display: block;}
+        #pro_rad05:checked ~ .product .pro_left .sheet05 {display: block;}
+        #pro_rad06:checked ~ .product .pro_left .sheet06 {display: block;}
+
+        .product{
+            width: 1070px;
+            /* background-color: #ccc; */
+            margin: 0 auto;
+            overflow: hidden;
+        }
+     
+        .product .pro{
+            width: 530px; height: 350px;
+            background-color: yellow;
+            float: left;
+        }
+
+        .product .pro_left{
+            margin-right: 10px;
+        }
+
+        .product .pro_left div{
+            display: none;
+        }
+
+        .product .pro_right label{
+            display: block;
+            width: 170px; height: 170px;
+            border: 1px solid black; box-sizing: border-box;
+            float: left;
+        }
+
+        .product .pro_right .pro_icon02,
+        .product .pro_right .pro_icon05{
+            margin: 0 10px;
+        }
+
+        .product .pro_right .pro_icon01,
+        .product .pro_right .pro_icon02,
+        .product .pro_right .pro_icon03 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <input type="checkbox" id="wing_btn">
+    <aside class="wing_box">
+        <label for="wing_btn" class="open_btn">열기</label>
+        <label for="wing_btn" class="close_btn">닫기</label>
+        <div class="wing_banner">
+            wing_banner
+        </div>
+    </aside>
+
+    <p class="title">추천 상품</p>
+    <input type="radio" name="product" id="pro_rad01">
+    <input type="radio" name="product" id="pro_rad02">
+    <input type="radio" name="product" id="pro_rad03">
+    <input type="radio" name="product" id="pro_rad04">
+    <input type="radio" name="product" id="pro_rad05">
+    <input type="radio" name="product" id="pro_rad06">
+    <section class="product">
+        <div class="pro pro_left">
+            <div class="sheet01">확대이미지1</div>
+            <div class="sheet02">확대이미지2</div>
+            <div class="sheet03">확대이미지3</div>
+            <div class="sheet04">확대이미지4</div>
+            <div class="sheet05">확대이미지5</div>
+            <div class="sheet06">확대이미지6</div>
+        </div>
+        <div class="pro pro_right">
+            <label for="pro_rad01" class="pro_icon01">상품1</label>
+            <label for="pro_rad02" class="pro_icon02">상품2</label>
+            <label for="pro_rad03" class="pro_icon03">상품3</label>
+            <label for="pro_rad04" class="pro_icon04">상품4</label>
+            <label for="pro_rad05" class="pro_icon05">상품5</label>
+            <label for="pro_rad06" class="pro_icon06">상품6</label>
+        </div>
+    </section>
+
+</body>
+</html>

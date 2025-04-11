@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        /* ----------menu01 ---------- */
+        .menu_01{
+            width: 1000px; 
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        .menu_01 ul{
+            /* overflow: hidden; */
+        }
+        .menu_01 ul li{
+            width: 200px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .menu_01 ul li:hover{
+            background-color: #ccc;
+            color: black;
+        }
+
+        /* ----------menu02 ---------- */
+        .menu_02{
+            width: 1070px; height: 50px;
+            margin: 30px auto;
+        }
+
+        .menu_02 ul{}
+        .menu_02 ul li{
+            width: 20%; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .menu_02 ul li:hover{
+            background-color: #ccc;
+            color: black;
+        }
+
+        /* ----------menu03 ---------- */
+        .menu_03{
+            width: 1070px; height: 50px;
+            margin: 0 auto;
+        }
+
+        .menu_03 ul{
+            font-size: 0;
+        }
+        .menu_03 ul li{
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            padding: 0 53px;
+            /* letter-spacing: 자간; */
+        }
+        /* ★★★글자수가 다르면 여백이 생기는데 간격을 똑같이 하고싶다면 부모의 font-size를 0으로 만들고 자식사이즈에 다시 font-size를 준다 */
+
+
+        /* ----------menu04 ---------- */
+        .menu_04{
+            width: 1000px; height: 50px;
+            margin: 30px auto;
+        }
+
+        .menu_04 ul{}
+        .menu_04 ul li{
+            width: 200px; height: 50px;
+            float: left;
+        }
+
+        .menu_04 ul li a{
+            display: block;
+            background-color: black;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .menu_04 ul li a:hover{
+            background-color: red;
+        }
+
+        /* 1)ul은 레이아웃, li는 디자인만 잡기 2)hover적용하려면 a태그에 블럭걸기 */
+
+        /* ----------menu04 ---------- */
+
+        .menu_05{
+            width: 1000px; height: 50px;
+            margin: 0 auto;
+        }
+
+        .menu_05 ul{}
+        .menu_05 ul li{
+            width: 200px; height: 50px;
+            float: left;
+        }
+
+        .menu_05 ul li a{
+            display: block;
+            background-color: black;
+            color: white;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        /* .menu_05 ul li ul li{} */
+        /* .menu_05 ul li a ul li{} (X) */
+        .menu_05 li li{
+            display: none;
+        }
+
+        /* .menu_05 ul li a:hover ul li{display: block;} (X) */
+        /* .menu_05 ul li:hover ul li{
+            display: block;
+        }  */
+          .menu_05 ul:hover li li{display: block;}
+
+        .menu_05 > ul > li:hover > a{
+            background-color: red;
+        }
+
+        .menu_05 li li:hover a{
+            color: yellow;
+        }
+        
+
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <nav class="menu_01">
+        <ul>
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+    </nav>
+
+    <nav class="menu_02">
+        <ul>
+            <li>menu01</li>
+            <li>menu02</li>
+            <li>menu03</li>
+            <li>menu04</li>
+            <li>menu05</li>
+        </ul>
+    </nav>
+
+    <nav class="menu_03">
+        <ul>
+            <li>SKINCARE</li>
+            <li>SUNCARE</li>
+            <li>MAKEUP</li>
+            <li>FRAGRANCE</li>
+            <li>MEN</li>
+            <li>BODY&HAIR</li>
+        </ul>
+    </nav>
+
+    <nav class="menu_04">
+        <ul>
+            <li><a href="#">menu01</a></li>
+            <li><a href="#">menu02</a></li>
+            <li><a href="#">menu03</a></li>
+            <li><a href="#">menu04</a></li>
+            <li><a href="#">menu05</a></li>
+        </ul>
+    </nav>
+
+    <nav class="menu_05">
+        <ul>
+            <li><a href="">menu01</a>
+            <ul>
+                <li><a href="">menu01-1</a></li>
+                <li><a href="">menu01-1</a></li>
+                <li><a href="">menu01-1</a></li>
+                <li><a href="">menu01-1</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu02</a>
+            <ul>
+                <li><a href="">menu02-1</a></li>
+                <li><a href="">menu02-1</a></li>
+                <li><a href="">menu02-1</a></li>
+                <li><a href="">menu02-1</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu03</a>
+            <ul>
+                <li><a href="">menu03-1</a></li>
+                <li><a href="">menu03-1</a></li>
+                <li><a href="">menu03-1</a></li>
+                <li><a href="">menu03-1</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu04</a>
+            <ul>
+                <li><a href="">menu04-1</a></li>
+                <li><a href="">menu04-1</a></li>
+                <li><a href="">menu04-1</a></li>
+                <li><a href="">menu04-1</a></li>
+            </ul>
+        </li>
+
+        <li><a href="">menu05</a>
+            <ul>
+                <li><a href="">menu05-1</a></li>
+                <li><a href="">menu05-1</a></li>
+                <li><a href="">menu05-1</a></li>
+                <li><a href="">menu05-1</a></li>
+            </ul>
+        </li>
+    </ul>
+    </nav>
+
+</body>
+</html>

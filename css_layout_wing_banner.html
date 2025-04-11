@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        /*-------------wing_banner-------------*/
+        #wing_btn{display: none;}
+        #wing_btn:checked ~ .wing_box .wing_banner {display: block;}
+        #wing_btn ~ .wing_box .wing_banner {display: none;}
+
+        #wing_btn:checked ~ .wing_box .open_btn {display: none;}
+        #wing_btn:checked ~ .wing_box .close_btn {display: block;}
+        #wing_btn ~ .wing_box .open_btn{display: block;}
+        #wing_btn ~ .wing_box .close_btn{display: none;}
+        
+        .wing_box{
+            position: fixed;
+            top: 0; right: 0;
+        }
+
+        .wing_box label{
+            display: block;
+            width: 50px; height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+
+        .wing_box .wing_banner{
+            width: 300px; height: 100vh;
+            /* 100vh : 세로 100% */
+            border: 1px solid black;
+            float: left;
+        }
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <input type="checkbox" id="wing_btn">
+    <aside class="wing_box">
+        <label for="wing_btn" class="open_btn">열기</label>
+        <label for="wing_btn" class="close_btn">닫기</label>
+        <div class="wing_banner">
+            wing_banner
+        </div>
+    </aside>
+
+    <p class="title">추천 상품</p>
+    <section class="product">
+        
+    </section>
+
+</body>
+</html>
