@@ -134,8 +134,19 @@
         /* .menu_05 ul li a:hover ul li{display: block;} (X) */
         /* .menu_05 ul li:hover ul li{
             display: block;
+            서브메뉴 세로로 내려오기
         }  */
-          .menu_05 ul:hover li li{display: block;}
+          /* .menu_05 ul:hover li li{display: block;} 풀다운메뉴 */
+
+        .menu_05 ul li:hover li{
+            display: block;
+            width: 100px;
+        }
+
+        .menu_05 ul ul{
+            width: 400px;
+            /* 부모가 처음에 200px이라서 400px로 잡아서 자식도 사이즈로 잡아주기 */
+        }
 
         .menu_05 > ul > li:hover > a{
             background-color: red;
