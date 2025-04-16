@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        /* ---------- boxA ---------- */
+        .boxA{
+            width: 1070px;
+            margin: 100 auto;
+            display: flex;/* 부모에게 자식을 옆으로 주겠다고 명령(float(자식위주)와 비교) */
+            justify-content: space-between;/* justify(양쪽정렬) / width - div전체값 = 전체 마진값 */
+        }
+        .boxA div{
+            width: 260px; height: 260px;
+            border: 1px solid black; box-sizing: border-box;
+        }
+        /* ---------- boxB ---------- */
+        .boxB{
+            /* width: 1070px;
+            margin: 100px auto; */
+            display: flex;
+            align-content: space-between;
+            flex-wrap: wrap; /* 기본 : no wrap > 줄바꾸기 기능 */
+        }
+        .boxB div{
+            width: 24%; /* 남은 끝에 여백을 주지 않기 위해 width값 생략 */
+            height: 260px;
+            border: 1px solid black; box-sizing: border-box;
+            margin-right: 10px;
+            flex-grow: 1;
+            /* flex-grow로 똑같이 나눠가져라 */
+        }
+        .boxB div:last-child, .boxB div:nth-child(4){margin: 0;}
+
+        /* ----------  ---------- */
+        /* ----------  ---------- */
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <section class="boxA">
+        <div class="box01">box01</div>
+        <div class="box02">box02</div>
+        <div class="box03">box03</div>
+        <div class="box04">box04</div>
+    </section>
+
+    <section class="boxB">
+        <div>box01</div>
+        <div>box02</div>
+        <div>box03</div>
+        <div>box04</div>
+        <div>box05</div>
+        <div>box06</div>
+        <div>box07</div>
+        <div>box08</div>
+    </section>
+
+</body>
+</html>
