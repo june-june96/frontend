@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hite_Site</title>
+    <style>
+        /* ----------- reset ---------- */
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a{text-decoration: none; color: black;}
+        img{
+            display: block;
+            /* width: 100%; height: auto; */
+        } /* 박스 안에 이미지가 다 들어갈 수 없기 때문에 block처리(여백없애기) */
+
+        /* ---------- position ---------- */
+        .container{
+            width: 1070px; height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .container div{position:absolute;}
+        .container .box01{top: 0; left: 0;}
+        .container .box02{top: 0; left: 270px;}
+        .container .box03{top: 0; left: 540px;}
+        .container .box04{top: 0; left: 810px;}
+        .container .box05{top: 270px; left: 0;}
+        .container .box06{top: 270px; left: 540px;}
+        .container .box07{top: 540px; left: 0;}
+        .container .box08{top: 540px; left: 270px;}
+        .container .box09{top: 540px; left: 540px;}
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box01"><img src="./images/img_01.jpg" alt="이미지1"></div>
+        <div class="box02"><img src="./images/img_02.jpg" alt="이미지2"></div>
+        <div class="box03"><img src="./images/img_03.jpg" alt="이미지3"></div>
+        <div class="box04"><img src="./images/img_04.jpg" alt="이미지4"></div>
+        <div class="box05"><img src="./images/img_05.jpg" alt="이미지5"></div>
+        <div class="box06"><img src="./images/img_06.jpg" alt="이미지6"></div>
+        <div class="box07"><img src="./images/img_07.jpg" alt="이미지7"></div>
+        <div class="box08"><img src="./images/img_08.jpg" alt="이미지8"></div>
+        <div class="box09"><img src="./images/img_09.jpg" alt="이미지9"></div>
+     </div>
+</body>
+</html>

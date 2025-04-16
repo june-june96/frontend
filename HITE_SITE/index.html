@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hite_Site</title>
+    <style>
+        /* ----------- reset ---------- */
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a{text-decoration: none; color: black;}
+        img{
+            display: block;
+            /* width: 100%; height: auto; */
+        } /* 박스 안에 이미지가 다 들어갈 수 없기 때문에 block처리(여백없애기) */
+
+        /* ---------- floating ---------- */
+        .container{
+            width: 1070px;
+            height: 800px;
+            margin: 0 auto;
+        }
+
+        .container .top {overflow: hidden;}
+
+        .container .top > div{
+            float: left;
+        }
+
+        .container .top .center{
+            margin: 0 10px;
+        }
+
+        .container .top .left div:first-child{margin-bottom: 10px;}
+        
+        .container .top .right{
+            width: 530px;
+        }
+
+        .container .top .right .div{
+            float: left;
+        }
+
+        .container .top .right div:first-child{margin-right: 10px;}
+        .container .top .right div:last-child{margin-top: 10px;}
+
+        .container .bottom{
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .container .bottom div{
+            float: left;
+        }
+
+        .container .bottom div:nth-child(2){margin: 0 10px;}
+
+    </style>
+</head>
+<body>
+
+    <!-- wrap - 전체 컨텐츠를 감싸는 경우 / content - 컨텐츠를 묶기 힘든 경우 / container - 메인컨텐츠가 하나 뿐이지만 그 안에 여러가지 컨텐츠로 나누어 진 경우 -->
+    <section class="container">
+        <div class="top">
+            <div class="left">
+                <div><img src="./images/img_01.jpg" alt="이미지1"></div>
+                <div><img src="./images/img_05.jpg" alt="이미지5"></div>
+            </div>
+            <div class="center"><img src="./images/img_02.jpg" alt="이미지2"></div>
+            <div class="right">
+                <div><img src="./images/img_03.jpg" alt="이미지3"></div>
+                <div><img src="./images/img_04.jpg" alt="이미지4"></div>
+                <div><img src="./images/img_06.jpg" alt="이미지6"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bot01"><img src="./images/img_07.jpg" alt="이미지 7"></div>
+            <div class="bot02"><img src="./images/img_08.jpg" alt="이미지 8"></div>
+            <div class="bot03"><img src="./images/img_09.jpg" alt="이미지 9"></div>
+            <!-- 이미지는 인라인태그로 글자취급되어 아래로 떨어지는 여백이 자동적으로 생김 -->
+        </div>
+    </section>
+    
+
+</body>
+</html>
