@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        .wrap{
+            width: 1070px;
+            margin: 0 auto;
+        }
+
+        .content_box{
+            display: flex;
+        }
+        .content_box .content{
+            width: 800px;
+            height: 600px;
+            border: 1px solid black; box-sizing: border-box;
+            margin-right: 10px;
+        }
+
+        .content_box .aside{
+            width: calc(1070px - 800px - 10px);
+            height: 600px;
+            border: 1px solid black; box-sizing: border-box;
+            /* order: -1; */
+        }
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="wrap">
+        <header class="header">
+            <h1>header</h1>
+        </header><!-- header -->
+
+        <div class="contente_box">
+            <div class="content">
+                <h2>content</h2>
+            </div><!-- content -->
+
+            <aside class="aside">
+                <h2>aside</h2>
+            </aside>
+        </div><!-- content box -->
+
+        <footer class="footer">
+            <h1>footer</h1>
+        </footer><!-- footer -->
+    </div><!-- wrap -->
+
+</body>
+</html>

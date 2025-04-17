@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+        img {width: 100%; height: auto;}
+
+        /* command */
+        .wrap{
+            width: 1070px;
+            margin: 0 auto;
+        }
+
+        .title{
+
+        }
+        .btn_default{}
+        .btn_hover{}
+        .btn_active{}
+
+        .mb {margin-bottom: 50px;}
+
+        /* ----------- header ---------- */
+        .header{
+            border-color: #eee;
+            /* margin-bottom: 50px; */
+        }
+        .header .gnb{
+            overflow: hidden;
+        }
+        .header .gnb ul{
+            float: right;
+        }
+        .header .gnb ul li{
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .header .logo{
+            width: 100px; height: 100px;
+            background-color: yellow;
+            margin: 10px auto;
+        }
+
+        /* ----------- content box----------- */
+        .content_box{
+            overflow: hidden;
+        }
+
+        .content_box .content{
+            width: 800px; height: 620px;
+            background-color: #ccc;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .content_box .aside{
+            width: calc(1070px - 800px - 10px);
+            height: 620px;
+            background-color: #ccc;
+            float: left;
+        }
+        .content_box .asie .news{
+            background-color: #eee;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .content_box .aside .news .news_img{
+            width: 80px; height: 80px;
+            float: left;
+            margin-right: 10px;
+        }
+        /* .content_box .aside .news .news_img{
+            width: 100%; height: auto;
+        } */
+        .content_box .aside .news .news_txt{
+            width: calc(260px - 80px -10px);
+            height: 80px;
+            border: 1px solid; box-sizing: border-box;
+            float: left;
+        }
+
+        /* ----------- footer ------------- */
+        .footer{
+            height: 300px;
+            border-color: #eee;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="wrap">
+        <header class="header mb">
+            <nav class="gnb_top gnb">
+                <ul>
+                <li>web</li>
+                <li>web</li>
+            </ul>
+            </nav><!-- gnb_top -->
+
+        <div class="logo">
+            logo
+        </div><!-- logo -->
+
+        <nav class="gnb">
+            <ul>
+                <li>html5</li>
+                <li>html5</li>
+            </ul>
+        </nav><!-- gnb -->
+       </header><!-- header -->
+
+    <div class="content_box mb">
+        <div class="content">
+            <section>main Aritcle</section>
+            <section>main Aritcle</section>
+            <section>main Aritcle</section>
+        </div><!-- content -->
+
+        <aside class="aside">
+            <p class="title">인기기사</p>
+            <div class="news">
+                <div class="news_img">
+                    <img src="./images/img02.jpg" alt="기사1 이미지">
+                </div>
+                <div class="new_txt">
+                    <p>제목</p>
+                    <p>간추린 기사내용</p>
+                    <p>날짜</p>
+                </div>
+            </div><!-- news -->
+            <!-- <div class="news">
+                <div class="news_img">
+                    <img src="./images/img02.jpg" alt="기사1 이미지">
+                </div>
+                <div class="new_txt">
+                    <p>제목</p>
+                    <p>간추린 기사내용</p>
+                    <p>날짜</p>
+                </div> -->
+            </div><!-- news -->
+        </aside><!-- aside -->
+    </div><!-- contentbox -->
+
+    <footer class="footer">
+        <h1>copyright</h1>
+    </footer>
+    <!-- footer -->
+    </div><!-- wrap -->
+
+</body>
+</html>

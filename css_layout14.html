@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        /* ---------- boxA ---------- */
+        .boxA{
+            display: flex;
+        }
+        .boxA div{
+            height: 200px;
+            border: 1px solid black;
+            flex-grow: 1;
+        }
+        .boxA div:first-child{
+            flex-grow: 2;
+            order: 1; /* 순서변경시 적용 / order값이 클수록 오른쪽(기본값 : 0) = 비추천 */
+        }
+        /* ★★★★★ */.boxA div:nth-child(3){order: -1;}/* order는 -값 적용 가능 */
+
+        /* ---------- boxB ---------- */
+        .boxB{
+            width: 1070px;
+            height: 260px;
+            margin: 100px auto;
+            background-color: #ccc;
+            display: flex;
+            justify-content: space-between;
+            /* justify-content: space-evenly; 모든 간격 동일 */
+            /* justify-content: space-around; 사이사이간격이 동일 */
+            /* justify-content: stretch; 부모높이만큼 자식이 알아서 맞춰진다(부모 높이적용) */
+        }
+        .boxB div{
+            width: 260px;
+            /* height: 260px; */
+            /* 자식사이즈를 정확하게 잡을 수 없고 자식사이즈에 맞춰서 부모사이즈를 잡기에 height를 안주기도 함 */
+            border: 1px solid black; box-sizing: border-box;
+            /* flex-grow: 1; justifycontent:space-between과 같이 사용불가 */
+        }
+
+        /* ---------- boxC ---------- */
+        .boxC{
+            width: 100%;height: 100vh;/* 화면전체라는 뜻 */
+            background-color: rgba(0,0,0,0.3);
+            /* ★★★★★ *//* padding-top: 300px; box-sizing: border-box; */
+            /* position: relative; */
+            display: flex;
+            justify-content: center;
+            align-items: center;/* 여러줄 정렬 align-content, 한줄 정렬 align-items */
+        }
+        .boxC div{
+            width: 800px; height: 500px;
+            background-color: black;
+            color: white;
+            /* margin: 0 auto; float, position은 함께 사용 불가 */
+            /* margin-top: 300px; */
+            /* position: absolute;
+            top: 50%; left: 50%; */
+            /* ★★★★★ */
+            /* margin-top: calc(-300px / 2);
+            margin-left: calc(-500px / 2); */
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <section class="boxA">
+        <div>box01</div>
+        <div>box02</div>
+        <div>box03</div>
+        <div>box04</div>
+    </section>
+
+    <section class="boxB">
+        <div>box01</div>
+        <div>box02</div>
+        <div>box03</div>
+        <div>box04</div>
+    </section>
+
+    <section class="boxC">
+        <div>로그인</div>
+    </section>
+</body>
+</html>
