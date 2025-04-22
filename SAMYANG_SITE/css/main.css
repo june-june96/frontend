@@ -1,0 +1,28 @@
+/* ---------- reset ------------ */
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+img{display:block; width: 100%; height: auto;}
+a{text-decoration: none; color: black;}
+
+/* ---------- gnb ---------- */
+.gnb_outer{
+    width: 100%;height: 40px;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 1px solid black;
+    border-top-color: orange;
+}
+.gnb01{
+    width: 1125px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.gnb01 .gnb_left{
+    line-height: 40px;
+}
+.gnb02{
+    width: 400px;
+    height: 20px;
+    border: 1px solid black;
+    float: left;
+}
