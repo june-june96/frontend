@@ -42,6 +42,9 @@ a{text-decoration: none; color: black;}
     color: #999;
     padding: 0 5px;
 }
+.header .header_top .gnb_top a:hover{
+    color: #1b2d51;
+}
 .header .logo_box{
     position: relative;
     margin: 20px;
@@ -99,4 +102,87 @@ a{text-decoration: none; color: black;}
 /* ----------- content ----------- */
 .choice{
     width: 100%;
+    margin: 10px auto;
+    display: flex;
+}
+
+/* ----------- content01 ---------- */
+.content01{
+    width: 100%; height: 720px;
+    margin: 0 auto;
+    display: flex;
+}
+.content01_r{
+    width: 490px; height: 720px;
+    margin: 10px;
+}
+.content01_l{
+    width: 490px; height: 720px;
+    margin: 10px;
+}
+.prod_big{
+    width: 490px; height: 420px;
+}
+.prod_small{
+    width: 230px; height: 230px;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* ----------- content02 ---------- */
+.content02{
+    width: 100%; height: 420px;
+    margin: 0 auto;
+    display: flex;
+}
+.content02_r{
+    width: 360px;height: 420px;
+}
+.content02_r > div{
+    width: 340px; height: 190px;
+    margin: 10px;
+}
+.content02_m{
+    width: 360px;height: 420px;
+}
+.content02_m > div{
+    width: 280px; height: 400px;
+    margin: 10px;
+}
+.content02_l{
+    width: 360px;height: 420px;
+}
+.content02_l > div{
+    width: 340px; height: 190px;
+    margin: 10px;
+}
+
+/* ----------- content03 ---------- */
+.content03{
+    width: 100%; height: 190px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.content03 > div{
+    width: 505px; height: 170px;
+    margin: 10px;
+}
+
+/* ---------- foooter ---------- */
+.footer{
+    width: 1030px; height: 30px;
+    margin: 10px auto;
+    overflow: hidden;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.footer_top_r > ul >li{
+    display: inline-block;
+    font-size: 12px;
+    color: black;
+    padding: 0 5px;
+}
+.footer_top_r > ul >li:hover{
+    color: #1b2d51;
 }
