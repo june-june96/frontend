@@ -1,0 +1,137 @@
+/* ---------- reset ------------ */
+/* *{margin: 0; padding: 0;}
+li{list-style: none;}
+img{display:block; width: 100%; height: auto;}
+a{text-decoration: none; color: black;} */
+
+
+/* 스타일시트 적용 우선순위
+1. inline_style
+2. 내부 style_sheet
+3. 외부 style_sheet
+2개 이상의 중복된 스타일 적용 시 제일 마지막 코드가 최종적으로 적용 */
+/* ---------- command ---------- */
+.mb{margin-bottom: 30px;}
+
+.title_box{
+    /* width: 1000px; */
+    /* margin: 0 auto; */
+    /* display: flex; */
+    position: relative;
+}
+/* .title_box .bullet_box{
+    width: 10px; height: 18px;
+    background-color: black;
+    margin-right: 5px;
+    position: absolute;
+    position absolute의 기본은 top, left 각각 0
+    top: 4px; left: 0;
+} */
+.title_box .title_txt{
+    font-size: 18px;
+    padding-left: 15px; box-sizing:border-box;
+}
+ /* bullet 가상 class */
+ .bullet::before{
+    content: '';
+    width: 10px; height: 18px;
+    background-color: black;
+    position: absolute;
+    /* 가상의 칸이기 때문에 absolute걸지 않으면 생성불가 */
+    top: 4px; left: 0;
+ }
+.sale{position: relative;}
+ /* ★★★★★★ */
+/* 가상선택자 */
+.sale::after{
+    content: 'sale';
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    top: -5px; right: 17px;
+ }
+.header{
+    width: 1000px; height: 200px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+/* ---------- visual_main ---------- */
+.visual_main{
+    width: 1000px; height: 500px;
+    margin: 30px auto;
+}
+.visual_main img {
+    display: block;
+    /* img가 인라인태그이므로 이미지 아래에 의미없는 빈 영역이 발생 */
+    width: 100%; 
+    height: auto;
+    /* width에 맞춰서 height가 자동으로 비율에 맞춰지므로 생략가능 */
+}
+
+/* ---------- rolling_banner ---------- */
+.rolling_banner{
+    width: 100%;
+    min-width: 1000px;
+    /* ★ 컨텐츠가 이 사이즈보다 더 작아지지 않는다. -> 컨텐츠 가치가 없어지기 때문 */
+    /* ★ max-width: 10000px; min-width와 반대로 제한크기보다는 작아짐 */
+}
+
+/* ---------- wrap ---------- */
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+}
+.event_box{
+    width: 920px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.event_box .event{
+    width: 300px;
+}
+.event_box .event .event_img{
+    /* width: 300px;  */
+    height: 160px; /* 생략 가능하지만 이미지를 딱맞게 가져와야함 */
+}
+.event_box .event .event_txt{
+    height: 30px;/* height생략시, 박스에 삐죽 튀어나온 느낌 */
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.best_box{
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.best_box .best{
+    width: 150px;
+    height: 250px;
+    position: relative;
+}
+.best_box .best .best_img{
+    /* width: 150px;  */
+    height: 175px;
+}
+.best_box .best .best_txt{
+    font-size: 14px;
+    text-align: center;
+}
+.best_box .best .best_btn{
+    display: block;
+    width: 150px;
+    height: 25px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    position: absolute;
+    /* absolute, fixed를 넣으면 글자 사이즈에 맞게 설정되어 width값 표시할 것 */
+    bottom: 0; left: 0;
+}

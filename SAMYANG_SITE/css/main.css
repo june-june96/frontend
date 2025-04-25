@@ -10,19 +10,222 @@ a{text-decoration: none; color: black;}
     margin: 0 auto;
     background-color: #eee;
     border: 1px solid black;
-    border-top-color: orange;
+    border-top: 3px solid orange;
+    display: flex;
 }
-.gnb01{
+.gnb{
     width: 1125px;
-    border: 1px solid black;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.gnb .gnb_left{
+    line-height: 40px;
+    width: 500px;;
+    float: left;
+}
+.gnb_right{
+    float: right;
+}
+.gnb_right01{
+    width: 140px;height:20px;
+    line-height: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    float: left;
+}
+.gnb_right01 ul li{
+    display: inline-block;
+    width: 20px;
+    margin-right: 10px;
+}
+.gnb_right02{
+    width: 330px; height: 20px;
+    float: right;
+    margin-top: 7px;
+}
+.gnb_right02 ul li{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 5px;
+}
+.gnb_right02 ul li:nth-child(-n+3){
+    border: 1px solid #eee;
+    background-color: white;}
+.gnb_right02 ul li:last-child{
+    border: 0;
+}
+.gnb_right02 ul li:first-child{
+    border: 1px solid orange;
+    color: orange;
+}
+
+/* ---------- header ---------- */
+.header{
+    width: 1125px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.logo>img{
+    width: 180px;height: 90px;
+    float: left;
+}
+.menu{
+    width: 778px;height: 30px;
+    float: right;
+    margin-top: 60px;
+}
+.menu li{
+    width: 150px;height: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* ---------- visual_main ---------- */
+.visual_main{
+    width: 100%;
+}
+
+/* ---------- product ---------- */
+.product{
+    width: 100%;
+}
+
+/* ---------- family ---------- */
+.family{
+    width: 100%;height: 890px;
+    background-image: url(../images/대관령.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.family_comment{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding: 50px;
+}
+.family_comment .comment01{
+    font-size: 30px;
+}
+.wrap{
+    width: 1125px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+}
+.wrap .family_content01{
+    margin-right: 15px;
+}
+.wrap .family_content02{
+    margin-right: 15px;
+}
+.wrap .family_content03{
+}
+.wrap .family_content03 > div:first-child{
+    margin-bottom: 14px;
+}
+
+/* ---------- community ---------- */
+.community{
+    width: 100%; height: 1000px;
+    background-color: blanchedalmond;
+}
+.community_comment{
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+    padding: 50px;
+}
+.community_comment .comment01{
+    font-size: 30px;
+}
+.wrap01{
+    width: 1125px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+}
+.wrap01 .community_content01{
+    margin-right: 15px;
+}
+.wrap01 .community_content02{
+    margin-right: 15px;
+}
+.wrap01 .community_content01 > div:first-child{
+    margin-bottom: 14px;
+}
+.wrap01 .community_content02 > div:first-child{
+    margin-bottom: 14px;
+}
+.wrap01 .community_content03 > div:first-child{
+    margin-bottom: 14px;
+}
+.wrap01 .community_content03 > div:last-child{
+    margin-top: 14px;
+}
+.community_sns{
+    width: 800px;
+    text-align: center;
     margin: 0 auto;
 }
-.gnb01 .gnb_left{
-    line-height: 40px;
+.community_sns ul li{
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
 }
-.gnb02{
-    width: 400px;
-    height: 20px;
+
+/* ---------- footer ---------- */
+.footer{
+    width: 1125px; height: 187px;
     border: 1px solid black;
-    float: left;
+    margin: 0 auto;
+    display: flex;
+}
+.footer_logo{
+    width: 185px; height: 185px
+}
+.footer_info{
+    width: 530px; height: 185px;
+}
+.footer_info01 li{
+    width: 93px;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    margin: 20px auto;
+}
+.footer_info01 li:nth-child(-n+4){
+    border-right: 1px solid black;
+}
+.footer_info01 li:nth-child(1){
+    margin-left: 0px;
+}
+.footer_info02{
+    width: 530px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.footer_sns{
+    width: 145px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.footer_sns>div{
+    display: inline-block;
+    margin-right: 5px;
+}
+.footer_sns>div>a>img{
+    width: 25px;
+    margin: 0 auto;
+}
+.footer_site01{
+    margin-top: 40px;
+}
+.footer_site01>select{
+    width: 200px;
+}
+.footer_site02>img{
+    width: 200px;
+    margin-top: 5px;
 }
