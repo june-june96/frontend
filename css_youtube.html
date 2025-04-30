@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+
+        section{
+            width: 800px;
+            /* overflow: hidden; */
+        }
+        section div{
+            width: 100%; height: 0;
+            padding-top: 56.25%;
+            /* 16:9 화면 비율에서의 높이 (9/16으로 계산) */
+            position: relative;
+        }
+        section div iframe{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        
+
+     
+
+    </style>
+</head>
+
+
+<body>
+    
+    <section>
+        <div>
+            <iframe width="1310" height="737" src="https://www.youtube.com/embed/JsYQmJfklfk" title="서사까지 완벽했던 레전드명곡🔥🔥: Lil Nas X - STAR WALKIN&#39; (League of Legends Worlds Anthem) [가사해석/번역]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <iframe width="1310" height="737" src="https://www.youtube.com/embed/JsYQmJfklfk" title="서사까지 완벽했던 레전드명곡🔥🔥: Lil Nas X - STAR WALKIN&#39; (League of Legends Worlds Anthem) [가사해석/번역]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+</body>
+</html>
