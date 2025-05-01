@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html & css3 연습파일</title>
+
+    <style>
+        /*reset(default)*/
+        *{margin: 0; padding: 0;}
+        ol, ul, li{list-style: none;}
+        a {text-decoration: none; color: black;}
+        img{display: block; width: 100%; height: auto;}
+
+        div{
+            width: 200px; height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 50px;
+            float: left;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+        
+        .box01{
+            background-color: #eee;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+        }/* 반드시 기본값을 넣고 속성과 지속시간 기입 */
+        .box01:hover{background-color: #666;}
+
+        .box02{
+            height: 200px;
+            transition-property: height;
+            transition-duration: 0.2s;
+            transition-delay: 0.2s;
+        }
+        .box02:hover{
+            height: 300px;
+        }
+
+        .box03{
+            transition-property: all;/* 모두 가진 속성 중에서 쓴다는 코드 */
+            transition-duration: 0.2s;
+        }
+        .box03:hover{
+            transform: translateY(-20px);
+        }
+     
+        .box04{position: relative;}
+        .box044{
+            margin: 0;
+            background-color: yellow;
+            position: absolute;
+            bottom: 0; left: 0;
+            border: 0;
+            transition: all 0.3s;
+            /* transition: all 0.3s 0.2s; transition 속성/duration/delay */
+        }
+        .box04:hover .box044{
+            bottom: 20px;
+        }
+
+        .box05{
+            border-radius: 0;
+            background-color: yellow;
+            transition: all 0.3s;
+        }
+        .box05:hover{
+            border-radius: 50%;
+            background-color: red;
+        }
+        /* 수정할 속성은 먼저 들어와야한다. */
+        .box06{
+            background-image: url('./images/img02.jpg');
+            background-size: cover;
+            transition: all 0.3s;
+        }
+        .box06:hover{
+            background-image: url('./images/img03.jpg');
+        }
+
+        .box07{
+            background-image: url('./images/img03.jpg');
+            background-size: cover;
+        }
+        .box07 .box077{
+            margin: 0;
+            border: 0;
+            /* ★★★★★ */background-color: rgba(0, 0, 0, 0.3);
+            opacity: 0; 
+            /* opacity는 박스 자체를 투명하게 만들기 때문에 투명도를 조절하기 위해선 rgba 사용 */
+            display: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .box07:hover .box077{
+            /* display: block; */
+            /* ★★★★★ display는 컨텐츠의 기본 속성이지 스타일이 아니기 때문에 transition이 적용불가 */
+            opacity: 1;
+            /* opacity 사용시 layer가 있기 때문에 밑에 있는게 선택불가 > 부모박스에 hover */
+        }
+        .box08{
+            position: relative;
+            overflow: hidden;
+        }
+        .box08 .box08_txt{
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            left: 0; bottom: -200px;
+            width: 200px; height: 200px;
+            transition: all 0.3s;
+        }
+        .box08:hover .box08_txt{
+            bottom: 0;
+        }
+        .box09{overflow: hidden;}
+        .box09 .box09_img{
+            margin: 0;
+            border: 0;
+            width: 200px; height: 200px;
+            transition: all 0.3s;
+        }
+        .box09:hover .box09_img{
+            width: 220px; height: 220px;
+        }
+
+        .box10{overflow: hidden;}
+        .box10 .box10_img{
+            margin: 0;
+            border: 0;
+            width: 200px; height: 200px;
+            transition: all 0.3s;
+        }
+        .box10:hover .box10_img{
+            transform: scale(1.1);
+            }
+
+        .box11{
+            background-image: url('./images/img02.jpg');
+            background-size: cover;
+            transition: all 0.3s;
+        }
+        .box11:hover{
+            background-image: url('./images/img05.jpg');
+            transform: rotateY(180deg);
+            /* 부모박스 말고 자식 박스에 회전시키기 */
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <div class="box01">background-color</div>
+    <div class="box02">height</div>
+    <div class="box03">move</div>
+    <div class="box04">
+        <div class="box044">move2</div>
+    </div>
+    <div class="box05">box05</div>
+    <div class="box06">bg_img</div>
+
+    <div class="box07">
+        <div class="box077">box07</div>
+    </div>
+
+    <div class="box08">
+        <img src="./images/img02.jpg" alt="아이템 이미지">
+        <p class="box08_txt">box08</p>
+    </div>
+
+    <div class="box09">
+        <div class="box09_img">
+        <img src="./images/img03.jpg" alt="이미지 사이즈 조절">
+        </div>
+    </div>
+
+    <div class="box10">
+        <div class="box10_img">
+        <img src="./images/img03.jpg" alt="이미지 사이즈 조절">
+        </div>
+    </div>
+
+    <div class="box11"></div>
+</body>
+</html>
