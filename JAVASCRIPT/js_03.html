@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaSript_기초문법</title>
+
+    <script>
+
+//국어, 영어, 수학 점수를 입력 받아 총점, 평균 구하기
+    // let kor = parseInt(prompt('국어 점수 입력', '100'));
+    // let eng = parseInt(prompt('영어 점수 입력'));
+    // let mat = parseInt(prompt('수학 점수 입력'));
+
+    // let sum = kor + eng + mat;
+    // let aver = parseInt(sum / 3);
+
+    // document.write('국어점수 :' + kor + '<br/>');
+    // document.write('영어점수 :' + eng + '<br/>');
+    // document.write('수학점수 :' + mat + '<br/>');
+    // document.write('총 점 :' + sum + '<br/>');
+    // document.write('평 균 :' + aver + '<br/>');
+    // document.write('평 균 :' + aver + '</br>');
+    // 버전에 따라서 지원여부가 다르기 때문에 compile과정에서 에러 발생 가능
+    // ',' 말고 '+'로 꼭 쓰기
+    // 입력 처리 구분해서 쓰게 하기
+
+
+
+//3개의 숫자 누적
+    // 1) 변수 선언하기
+    // let sum = 0;
+    // let input = parseInt(prompt('첫 번째 누적 값'));
+
+    // 1-1) 복합대입연산자로 첫 번째 누적값 설정하기
+    // sum += input;
+    // document.write('첫 번째 누적 값 ' + sum + '</br>');
+
+    // 2) 두 번째 숫자에 대한 변수 선언하고 누적 값 설정하기
+    // input = parseInt(prompt('두 번째 누적 값'));
+    // sum += input;
+    // document.write('두 번째 누적 값 ' + sum + '</br>');
+
+    // 3) 세 번째 숫자에 대한 변수 선언 하고 누적 값 설정하기
+    // input = parseInt(prompt('세 번째 누적 값'));
+    // sum += input;
+    // document.write('세 번째 누적 값 ' + sum + '</br>');
+
+
+
+//table 작성
+    // 1) table 변수 선언하기
+    // let table = '<table border = "1px">';
+
+    // 2) 한칸씩 누적되는 표이므로 복합연산자 '+=' 으로 테이블 만들기
+    // table += '<tr>';
+    // table += '<td>1</td>';
+    // table += '<td>2</td>';
+    // table += '<td>3</td>';
+    // table += '<td>4</td>';
+    // table += '</tr>';
+    
+    // table += '<tr>';
+    // table += '<td>5</td>';
+    // table += '<td>6</td>';
+    // table += '<td>7</td>';
+    // table += '<td>8</td>';
+    // table += '</tr>';
+
+    // 3) 테이블 태그 닫기
+    // table += '</table>'
+
+    // 4) 테이블 태그 출력하기
+    // document.write(table);
+ 
+
+
+// 복합 대입 연산자
+    //    let result = 10;
+
+    //    result += 11; //result = result + 11
+    //    document.write('더하기' + result + '</br>');
+
+    //    result -= 12; //result = result - 12
+    //    document.write('빼기' + result + '</br>');
+
+    //    result *= 13; //result = result * 13
+    //    document.write('곱하기' + result + '</br>');
+
+    //    result /= 14; //result = result / 14
+    //    document.write('나누기' + result + '</br>');
+
+
+
+// 삼항 연산자
+    // 두 숫자 중 어떤 숫자가 더 큰가?
+    // let num1 = 11;
+    // let num2 = 15;
+
+    // let result = num1 > num2 ? 'num1이 크다' : 'num2가 크다';
+    // let result = 조건 ?('만약 (조건)한다면~ = ?') true : false; (true면 변수01, false면 변수 02) 둘 중 하나만 무조건 선택
+    // document.write(result);
+
+
+    // 최댓값과 최소값 구별하기
+    // let a = parseInt(prompt('첫 번째 수 입력'));
+    // let b = parseInt(prompt('두 번째 수 입력'));
+
+    // let max = a>b ? a : b;
+    // let min = a<b ? a : b;
+    // document.write('max= '+ max + '</br>');
+    // document.write('min= '+ min + '</br>');
+
+    // document.write('큰값=', a>b ? a : b);
+    // 메모리에 저장된 변수가 따로 없기에 한번 밖에 쓸 수 없다
+
+
+
+    // 짝수, 홀수 판별하여 출력
+    // 1. 내가 생각한 것
+    // let a = parseInt(prompt('짝수인가요? 홀수인가요?'));
+
+    // let num = a/2 = 0 ?
+    // let input = parseInt(prompt('정수입력'));
+
+    // 2. 정답
+    // let result = input % 2;
+    // let message = result === 0 ? '짝수' : '홀수';
+
+    // document.write('입력받은 값' + input + '은' + message + '입니다.');
+
+
+
+
+    // 두개의 수를 입력받아서 max, min 구하기
+    // let a = parseInt(prompt('첫 번째 수 입력'));
+    // let b = parseInt(prompt('두 번째 수 입력'));
+
+    // let max = 0;
+    // let min = 0;
+    // 클리어 시키기
+
+    // num1>num2 ? (max=num1, min=num2) : (max=num2, min=num1);
+    // 두 가지 조건일 경우는 하나의 문장으로 () 묶기
+    // document.write('max = ' + max + ' min=' + min);
+    
+
+
+    // 하나의 정수를 입력 받고, 양수/ 음수 / 0판단
+    // 1. 내가 생각 한 것
+    // let num = parseInt(prompt('정수를 입력하세요'));
+    // let minus = 0;
+    // let plus = 0;
+    // let x = 0;
+
+    // 2. 정답
+    // let num = parseInt(prompt('정수를 입력하세요.'));
+    // let result = num>0 ? '양수' : (num<0 ? '음수' : 0);
+    // document.write('입력 받은 값' + '<font color = "red">' + num + '</font>은' + result);
+
+
+
+
+    //두 개의 수를 입력 받아서 첫번째 값이 큰 지 작은 지 같은 지
+    // let a = parseInt(prompt('첫 번째 수 입력'));
+    // let b = parseInt(prompt('두 번째 수 입력'));
+
+    // num1>num2 ? document.write('첫번째 값이 크다') : (num1<num2 ? document.write('두번째 값이 크다') : document.write('두 수가 같다.'))
+
+    // let result = num1>num2 ? '첫번째 값이 크다' : (num1<num2 ? '두번째 값이 크다' : '두 수가 같다.');
+
+    // document.write(result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
