@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript_switch_case</title>
+</head>
+
+<script>
+    // 모듈, 블럭 나갈 때 break 사용(강제로)
+    // let num=prompt('번호를 선택하세요!');
+    // switch(num){
+    //     case 1 : document.write('예금조회');
+    //     break;
+    //     case 2 : document.write('예금출금');
+    //     break;
+    //     case 3 : document.write('예금입금');
+    //     break;
+    //     case 4 : document.write('예금이체');
+    //     break;
+    //     default:
+    //     document.write('잘못 눌렀음');
+    // }
+
+
+
+    // if 문으로 변경 시
+    // if(num==='1'){
+    //     document.write('예금조희');
+    // }else if(num==='2'){
+    //     document.write('예금출금');
+    // }else if(num==='3'){
+    //     document.write('예금입금');
+    // }else if(num==='4'){
+    //     document.write('예금이채')
+    // }else{
+    //     document.write('잘못 눌렀음');
+    // }
+
+
+
+    //국어, 영어, 수학 점수를 입력 받아 총점, 평균 구하기
+    // let kor = parseInt(prompt('국어 점수 입력', '100'));
+    // let eng = parseInt(prompt('영어 점수 입력'));
+    // let mat = parseInt(prompt('수학 점수 입력'));
+
+    // let sum = kor + eng + mat;
+    // let aver = parseInt(sum / 3);
+    // let result = Math.floor(aver / 10);
+    // Math는 자바스크립트가 가지고 있는 내장 객체함수(이미 만들어짐)
+    // floor는 내림함수(버리기), ceil은 올림함수, round는 반올림
+
+    // let score;
+
+    // switch(result){
+    //     case 10:
+    //     case 9: score = 'A'; break;// 10이거나 9이거나(10일 때, 실행할 실행문이 없기 때문)
+    //     case 8: score = 'B'; break;
+    //     case 7: score = 'C'; break;
+    //     case 6: score = 'D'; break;
+    //     default:
+    //     score = 'F';
+    // }
+
+
+
+    // if 문으로 변경 시
+    // if(result=='10' || result=='9'){
+    //     document.write('A');
+    // }else if(result=='8'){
+    //     document.write('B');
+    // }else if(result=='7'){
+    //     document.write('C');
+    // }else if(result=='6'){
+    //     document.write('D');
+    // }else{
+    //     document.write('F');
+    // }
+
+
+    // document.write('국어점수 :' + kor + '<br/>');
+    // document.write('영어점수 :' + eng + '<br/>');
+    // document.write('수학점수 :' + mat + '<br/>');
+    // document.write('총 점 :' + sum + '<br/>');
+    // document.write('평 균 :' + aver + '<br/>');
+    // document.write('점 수 :' + score + '</br>');
+
+
+
+
+    // 이탈리안 음식 주문 어플
+
+    // let menu = prompt('피자(P/p), 스파게티(S/s), 리조또(R/r), 드링크(D/d)로 주문');
+    // let order;
+
+    // switch(menu) {
+    //     case 'P':
+    //     case 'p': order = '피자를 주문하셨습니다.'; break;
+    //     case 'S':
+    //     case 's': order = '스파게티를 주문하셨습니다.'; break;
+    //     case 'R':
+    //     case 'r': order = '리조또를 주문하셨습니다.'; break;
+    //     case 'D':
+    //     case 'd': order = '드링크를 주문하셨습니다.'; break;
+    //     default:
+    //     order = '잘못 주문하셨습니다.';
+    // }
+
+    // document.write(order);
+
+
+
+
+    //  네이버, 다음, 네이트, 구글 사이트로 이동
+
+    // let site = prompt('네이버, 다음, 네이트, 구글 중 하나의 포털사이트 입력');
+    // let url;
+
+    // switch(site){
+    //     case '네이버':
+    //         url = 'www.naver.com'; break;
+    //     case '다음' :
+    //         url = 'www.daum.net'; break;
+    //     case '네이트' :
+    //         url = 'www.nate.com'; break
+    //     case '구글' :
+    //         url = 'www.google.com'; break;
+    //     default:
+    //         alert('보기 중에 없는 사이트입니다.');
+    // }
+
+    // if(url){
+    //     location.href = 'http://' + url;
+    //     // location이라는 객체에 href
+    // }
+
+
+    
+
+    // 사칙연산 계산기 프로그램을 제작하려고 한다. 두개의 정수를 입력받고, 연산자 중 하나를 입력하여 결과를 출력하는 프로그램을 작성하시오
+
+    // let num1 = parseInt(prompt('첫 번째 정수를 알려주세요.'));
+    // let num2 = parseInt(prompt('두 번째 정수를 알려주세요.'));
+    // let calc = prompt('계산하고자 하는 연산자를 선택하세요.');
+    // let result;
+
+    // switch(calc){
+    //     case '+' :
+    //     result = num1+num2; break;
+    //     case '-' :
+    //     result = num1-num2; break;
+    //     case '/' :
+    //     result = num1/num2; break;
+    //     case '*' :
+    //     result = num1*num2; break;
+    //     default :
+    //     alert('계산할 수 없는 연산입니다.')
+    // }
+    // document.write(result);
+    
+
+
+    // 지역명을 입력하면 지역번호를 알려주는 프로그램 작성하기
+    // (서울 : 02, 경기:031, 대구:053, 인천:032, 광주:062, 대전:042, 울산:052, 전북:063, 전남:061, 제주:064) / 그 외 지역은 아직 등록되어 있지 않습니다.
+    
+
+    // let local = prompt('현재 찾고자 하는 지역명을 입력해주세요.');
+    // let localNum;
+
+    // switch(local){
+    //     case '서울' :
+    //     localNum = '02'; break;
+    //     case '경기' :
+    //     localNum = '031'; break;
+    //     case '대구' :
+    //     localNum = '053'; break;
+    //     case '인천' :
+    //     localNum = '032'; break;
+    //     case '광주' :
+    //     localNum = '063'; break;
+    //     case '대전' :
+    //     localNum = '042'; break;
+    //     case '울산' :
+    //     localNum = '052'; break;
+    //     case '전북' :
+    //     localNum = '063'; break;
+    //     case '전남' :
+    //     localNum = '061'; break;
+    //     case '제주' :
+    //     localNum = '064'; break;
+    //     default :
+    //     alert('지역번호가 아직 등록되어 있지 않습니다.')
+    // }
+
+    // document.write(localNum);
+
+
+
+
+
+
+</script>
+
+<body>
+    
+    
+
+</body>
+</html>
